@@ -8,8 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    color: #000000;
+    line-height: 2.6;
 }
 
 .container {
@@ -22,8 +22,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 1rem 2rem;
+    background-color: #ed7878;
+    padding: 2rem 2rem;
     color: white;
 }
 .navbar a {
@@ -87,25 +87,23 @@ body {
   
   .checkbox-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10px, auto));
-    gap: 10px;
-  }
-  
-  .checkbox-row {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  
-  .checkbox-group label {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    gap: 1px;
+}
+
+.checkbox-group label {
     display: flex;
     align-items: center;
     cursor: pointer;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 5px;
-    accent-color: #333;
-  }
+    font-size: 1rem; /* Ensure the font size is readable */
+    color: #333; /* Ensure the text color contrasts well */
+}
+
+input[type="checkbox"] {
+    margin-right: 22px; /* Add spacing between the checkbox and the label text */
+    accent-color: #333; /* Set the color of the checkbox for better visibility */
+}
+
   
   textarea {
     width: 100%;
@@ -270,8 +268,18 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    overflow: hidden;
+    Margin right: 10px;
     background-color: #ececec;
   }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
 
   .comment-content {
     flex: 1;
@@ -447,4 +455,62 @@ body {
     width: 100%;
     height: 100%;
     border: none;
+  }
+
+  .search-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    background-color: #fff;
+  }
+  
+  .search-bar input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .search-bar .clear-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+  
+  .filter {
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    background-color: #eee;
+    color: #333;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+  }
+  
+  .filter:hover {
+    background-color: #ddd;
+  }
+  
+  .more-options {
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    color: #888;
   }
